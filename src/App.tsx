@@ -2,11 +2,11 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Pagination from './components/pagination/Pagination';
 import Years from './components/Years/Years';
-import './index.scss';
+import style from './index.module.scss';
 
 const App: React.FC = () => {
   return (
-    <div className='container'>
+    <div className={style.container}>
       <Header />
       <Years />
       <Pagination />
