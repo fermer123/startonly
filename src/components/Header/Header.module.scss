@@ -1,0 +1,26 @@
+.header {
+  max-width: 350px;
+  position: relative;
+  margin-bottom: 96px;
+  padding-left: 78px;
+  padding-top: 170px;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+  color: #42567a;
+  text-align: left;
+  vertical-align: top;
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 130px;
+    width: 5px;
+    background: linear-gradient(#3877ee, #ef5da8);
+    left: 0;
+    bottom: 0;
+  }
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

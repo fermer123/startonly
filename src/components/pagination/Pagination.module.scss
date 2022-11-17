@@ -1,0 +1,22 @@
+.container {
+  max-width: 120px;
+  margin-left: 80px;
+  margin-bottom: 56px;
+  .pageCount {
+    font-size: 14px;
+    line-height: 18px;
+    color: #42567a;
+    margin-bottom: 20px;
+  }
+  .pageCount_btn_group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    .pageCount_btn {
+      padding: 18.75px 22.5px;
+      border-radius: 50%;
+      border: 2px solid #42567a;
+      background-color: transparent;
+    }
+  }
+}

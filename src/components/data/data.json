@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "startDate": 2017,
+    "endDate": 2022,
+    "events": [
+      {
+        "year": 2017,
+        "content": "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+      },
+      { "year": 2018, "content": "qweqwe" },
+      { "year": 2019, "content": "qweqwe" },
+      { "year": 2020, "content": "qweqwe" },
+      { "year": 2021, "content": "qweqwe" },
+      { "year": 2022, "content": "qweqwe" }
+    ],
+    "title": "Наука"
+  },
+  {
+    "id": 2,
+    "startDate": 2011,
+    "endDate": 2016,
+    "events": [
+      { "year": 2011, "content": "qweqwe" },
+      { "year": 2012, "content": "qweqwe" },
+      { "year": 2013, "content": "qweqwe" },
+      { "year": 2014, "content": "qweqwe" },
+      {
+        "year": 2015,
+        "content": "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды"
+      },
+      {
+        "year": 2016,
+        "content": "Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик, получившую обозначение GN-z11"
+      }
+    ],
+    "title": "Литература"
+  },
+  {
+    "id": 3,
+    "startDate": 2005,
+    "endDate": 2010,
+    "events": [
+      { "year": 2005, "content": "qweqwe" },
+      { "year": 2006, "content": "qweqwe" },
+      { "year": 2007, "content": "qweqwe" },
+      { "year": 2008, "content": "qweqwe" },
+      { "year": 2009, "content": "qweqwe" },
+      { "year": 2010, "content": "qweqwe" }
+    ],
+    "title": "Космос"
+  },
+  {
+    "id": 4,
+    "startDate": 1999,
+    "endDate": 2004,
+    "events": [
+      { "year": 1999, "content": "qweqwe" },
+      { "year": 2000, "content": "qweqwe" },
+      { "year": 2001, "content": "qweqwe" },
+      { "year": 2002, "content": "qweqwe" },
+      { "year": 2003, "content": "qweqwe" },
+      { "year": 2004, "content": "qweqwe" }
+    ],
+    "title": "Авто"
+  }
+]
