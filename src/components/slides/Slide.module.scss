@@ -1,10 +1,14 @@
-.container {
-  .years_container {
+.mySwiper {
+  margin-top: 56px;
+  max-width: 1200px;
+  .swiperslide {
+    max-width: 320px;
     .year {
       font-size: 25px;
       line-height: 120%;
       text-transform: uppercase;
       color: #3877ee;
+      margin-bottom: 15px;
     }
     .content {
       font-size: 20px;
