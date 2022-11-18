@@ -1,8 +1,6 @@
-import { iventItem, useCustomContext } from '../context/Context';
-import style from './Slide.module.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
+// import { iventItem, useCustomContext } from '../context/Context';
+// import style from './Slide.module.scss';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 // const Slide: React.FC = () => {
 //   const { data, year } = useCustomContext();
