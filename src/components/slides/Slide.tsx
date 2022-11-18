@@ -11,7 +11,7 @@ const Slide: React.FC = () => {
   const { data, year } = useCustomContext();
 
   return (
-    <div>
+    <div className={style.container}>
       <Swiper
         modules={[Navigation, Pagination]}
         navigation
@@ -21,8 +21,8 @@ const Slide: React.FC = () => {
       >
         {data[year - 1].events.map((e: iventItem) => (
           <SwiperSlide className={style.swiperslide} key={e.year}>
-            <p className={style.year}>{e.year}</p>
-            <p className={style.content}>{e.content}</p>
+            <p className={style.slide_year}>{e.year}</p>
+            <p className={style.slide_content}>{e.content}</p>
           </SwiperSlide>
         ))}
       </Swiper>
