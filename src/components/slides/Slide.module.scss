@@ -1,10 +1,13 @@
-.container {
+.swiper_container {
   margin-top: 56px;
-  max-width: 1200px;
+  max-width: 1400px;
   padding: 0 80px;
+  position: relative;
+  padding: 0 80px;
+  margin: 0 auto;
 
   .mySwiper {
-    position: relative;
+    //max-width: 1200px;
     width: 100%;
     height: 320px;
     .swiperslide {
@@ -38,7 +41,7 @@
     .swiper-button-next,
     .swiper-button-prev {
       position: absolute;
-      top: 50%;
+      top: 0;
       width: 40px;
       height: 40px;
       z-index: 10;
@@ -46,14 +49,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #3877ee;
+      color: #3877ee !important;
       border-radius: 50%;
       background-color: #ffffff;
       box-shadow: 0px 0px 15px rgba(56, 119, 238, 0.1);
-      --swiper-navigation-size: 15px;
+      --swiper-navigation-size: 10px;
     }
     .swiper-button-prev {
+      visibility: visible;
       left: 0;
+      transform: translateX(-17px);
+      background-color: red;
+    }
+    .swiper-button-disabled {
+      opacity: 0;
     }
   }
 }

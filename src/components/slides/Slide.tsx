@@ -11,12 +11,26 @@ const Slide: React.FC = () => {
   const { data, year } = useCustomContext();
 
   return (
-    <div className={style.container}>
+    <div className={style.swiper_container}>
       <Swiper
         modules={[Navigation, Pagination]}
         navigation
         spaceBetween={80}
         slidesPerView={3}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 25,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
         className={style.mySwiper}
       >
         {data[year - 1].events.map((e: iventItem) => (
