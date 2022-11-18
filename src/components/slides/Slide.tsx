@@ -14,7 +14,7 @@ const Slide: React.FC = () => {
       modules={[Navigation]}
       navigation
       spaceBetween={80}
-      slidesPerView={3}
+      slidesPerView={5}
     >
       {data[year - 1].events.map((e: iventItem) => (
         <SwiperSlide className={style.swiperslide} key={e.year}>

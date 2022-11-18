@@ -6,7 +6,7 @@ const Years: React.FC = () => {
   const { data, year, rotate, rot } = useCustomContext();
 
   return (
-    <div className={style.container}>
+    <div className={style.years_container}>
       {data.map((e) =>
         e.id === year ? (
           <div className={style.years} key={e.id}>
