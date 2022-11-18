@@ -9,6 +9,9 @@ module.exports = {
     filename: 'build.js',
   },
   resolve: {
+    alias: {
+      swiper: path.resolve(__dirname, './node_modules/swiper/'),
+    },
     extensions: ['.ts', '.tsx', '.js'],
   },
   devServer: {
@@ -39,7 +42,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: { localIdentName: '[name]__[local]___[hash:base64:5]' },
+              modules: { localIdentName: '[local]' },
             },
             // options: {
             //   modules: true,
