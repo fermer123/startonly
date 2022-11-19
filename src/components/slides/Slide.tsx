@@ -27,6 +27,8 @@ const Slide: React.FC = () => {
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
+        slidesPerView={3}
+        spaceBetween={80}
         pagination={{
           el: '.my-custom-pagination-div',
           clickable: true,
@@ -36,13 +38,13 @@ const Slide: React.FC = () => {
           },
         }}
         breakpoints={{
-          640: {
+          500: {
             slidesPerView: 1,
             spaceBetween: 25,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 40,
+            spaceBetween: 80,
           },
           1024: {
             slidesPerView: 3,
