@@ -27,8 +27,6 @@ const Slide: React.FC = () => {
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
-        spaceBetween={80}
-        slidesPerView={3}
         pagination={{
           el: '.my-custom-pagination-div',
           clickable: true,
@@ -48,7 +46,7 @@ const Slide: React.FC = () => {
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 50,
+            spaceBetween: 80,
           },
         }}
         className={style.mySwiper}
