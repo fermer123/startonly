@@ -3,10 +3,10 @@
   max-height: 160px;
   padding: 0 215px;
   margin-bottom: 137px;
-
   .years {
+    max-width: 973px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     font-weight: 700;
     font-size: 200px;
@@ -90,6 +90,64 @@
       .years_active_title {
         font-weight: 700;
         margin-left: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .years_container {
+    padding: 0 100px;
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 960px) {
+  .years_container {
+    padding: 0 100px;
+    .years {
+      max-width: 973px;
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 72px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      .years_startDate {
+        color: #3877ee;
+      }
+      .years_endDate {
+        color: #ef5da8;
+        margin-left: 80px;
+      }
+    }
+    ul {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .years_container {
+    margin: 0 auto;
+    max-height: 73px;
+    padding: 0 20px;
+    .years {
+      position: relative;
+      padding-bottom: 77px;
+      align-items: center;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 72px;
+      .years_endDate {
+        margin-left: 35px;
+      }
+      &::after {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #c7cdd9;
       }
     }
   }

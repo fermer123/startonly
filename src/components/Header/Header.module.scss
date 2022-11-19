@@ -24,3 +24,32 @@
     text-transform: uppercase;
   }
 }
+@media (max-width: 960px) {
+  .header {
+    max-width: 350px;
+    position: relative;
+    margin-bottom: 96px;
+    padding-left: 78px;
+    padding-top: 100px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    max-width: 123px;
+    margin-bottom: 56px;
+    padding-left: 20px;
+    padding-top: 59px;
+    font-weight: 700;
+    font-size: 20px;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
