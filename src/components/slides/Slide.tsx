@@ -4,7 +4,7 @@ import style from './Slide.module.scss';
 import 'swiper/swiper.scss';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import 'swiper/modules/navigation/navigation.scss';
-import { Navigation } from 'swiper';
+import { Navigation, Pagination } from 'swiper';
 
 const Slide: React.FC = () => {
   const { data, year } = useCustomContext();

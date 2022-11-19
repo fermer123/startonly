@@ -97,25 +97,35 @@
 @media (max-width: 1200px) {
   .years_container {
     padding: 0 100px;
-    margin-bottom: 90px;
   }
 }
 @media (max-width: 960px) {
   .years_container {
     padding: 0 100px;
+    margin-bottom: 0;
     .years {
+      position: relative;
+      padding-bottom: 77px;
       max-width: 973px;
       font-weight: 700;
       font-size: 100px;
       line-height: 72px;
-      text-align: center;
-      letter-spacing: -0.02em;
       .years_startDate {
         color: #3877ee;
       }
       .years_endDate {
         color: #ef5da8;
         margin-left: 80px;
+      }
+      &::after {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #c7cdd9;
       }
     }
     ul {
@@ -129,25 +139,13 @@
     margin: 0 auto;
     max-height: 73px;
     padding: 0 20px;
+    margin-bottom: 78px;
     .years {
-      position: relative;
-      padding-bottom: 77px;
-      align-items: center;
-      font-weight: 700;
+      padding-bottom: 78px;
       font-size: 56px;
       line-height: 72px;
       .years_endDate {
         margin-left: 35px;
-      }
-      &::after {
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        display: block;
-        content: '';
-        width: 100%;
-        height: 1px;
-        background-color: #c7cdd9;
       }
     }
   }

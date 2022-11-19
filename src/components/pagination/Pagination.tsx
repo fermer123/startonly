@@ -6,7 +6,7 @@ const Pagination = () => {
   const { data, year, rot } = useCustomContext();
 
   return (
-    <div className={style.pagination_container}>
+    <div className={style.container_pagination}>
       <div className={style.pageCount}>
         {year}/{data.length}
       </div>

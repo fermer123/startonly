@@ -1,7 +1,6 @@
-.pagination_container {
-  display: block;
+.container_pagination {
   margin-bottom: 56px;
-  margin-left: 80px;
+  margin-left: 78px;
   max-width: 120px;
   .pageCount {
     font-size: 14px;
@@ -17,6 +16,25 @@
       border-radius: 50%;
       border: 2px solid #42567a;
       background-color: transparent;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container_pagination {
+    margin-bottom: 0px;
+    margin-left: 20px;
+    .pageCount {
+      margin-bottom: 10px;
+    }
+    .pageCount_btn_group {
+      gap: 8px;
+      .pageCount_btn {
+        padding: 10px;
+        border-radius: 50%;
+        border: 2px solid #42567a;
+        background-color: transparent;
+      }
     }
   }
 }
