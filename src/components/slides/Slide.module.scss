@@ -20,6 +20,8 @@
         margin-bottom: 15px;
       }
       .slide_content {
+        max-height: 90px;
+        overflow: scroll;
         font-size: 20px;
         line-height: 30px;
         color: #42567a;
@@ -46,22 +48,32 @@
   //       display: none;
   //     }
   //   }
-  //   .swiper-button-prev {
-  //     background-color: red;
-  //     left: -10;
-  //   }
-  //   .swiper-button-next {
-  //     background-color: red;
-  //     right: 40px;
-  //   }
-  //   .swiper-button-disabled {
-  //     opacity: 0;
-  //   }
 
-  .swiper-button-disabled {
-    opacity: 0;
+  // .swiper-button-disabled {
+  //   opacity: 0;
+  // }
+  .my-custom-pagination-div {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateY(103px);
+    display: flex;
+    gap: 10px;
   }
 
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: #42567a;
+    opacity: 0.4;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 6px;
+    height: 6px;
+    background: #42567a;
+    opacity: 1;
+  }
   .prev_btn,
   .next_btn {
     color: #3877ee;
@@ -82,5 +94,33 @@
   }
   .next_btn {
     right: 40;
+  }
+}
+
+@media (max-width: 500px) {
+  .swiper_container {
+    margin-top: 56px;
+    max-width: 1400px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 103px;
+    .mySwiper {
+      .swiperslide {
+        max-width: 166px;
+        .slide_year {
+          font-size: 25px;
+          line-height: 120%;
+          color: #3877ee;
+          margin-bottom: 15px;
+        }
+        .slide_content {
+          max-height: 166px;
+          overflow: scroll;
+          font-size: 20px;
+          line-height: 30px;
+          color: #42567a;
+        }
+      }
+    }
   }
 }

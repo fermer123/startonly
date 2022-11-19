@@ -4,27 +4,39 @@ import style from './Slide.module.scss';
 import 'swiper/swiper.scss';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import 'swiper/modules/navigation/navigation.scss';
+import 'swiper/modules/pagination/pagination.scss';
 import { Navigation, Pagination } from 'swiper';
 
 const Slide: React.FC = () => {
   const { data, year } = useCustomContext();
-
+  const matchMedia = window.matchMedia('(max-width: 500px)').matches;
   const swiperRef = useRef(null);
   return (
     <div className={style.swiper_container}>
-      <button
-        className={style.prev_btn}
-        onClick={() => swiperRef.current?.slidePrev()}
-      >
-        &lt;
-      </button>
+      {!matchMedia ? (
+        <button
+          className={style.prev_btn}
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          &lt;
+        </button>
+      ) : null}
+
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
         spaceBetween={80}
         slidesPerView={3}
+        pagination={{
+          el: '.my-custom-pagination-div',
+          clickable: true,
+          enabled: matchMedia,
+          renderBullet: (index, className) => {
+            return '<span class="' + className + '">' + '</span>';
+          },
+        }}
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -48,12 +60,15 @@ const Slide: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button
-        className={style.next_btn}
-        onClick={() => swiperRef.current?.slideNext()}
-      >
-        &gt;
-      </button>
+      {matchMedia && <div className={style['my-custom-pagination-div']} />}
+      {!matchMedia ? (
+        <button
+          className={style.next_btn}
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          &gt;
+        </button>
+      ) : null}
     </div>
   );
 };
