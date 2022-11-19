@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { iventItem, useCustomContext } from '../context/Context';
 import style from './Slide.module.scss';
 import 'swiper/swiper.scss';
@@ -9,12 +9,26 @@ import { Navigation, Pagination } from 'swiper';
 
 const Slide: React.FC = () => {
   const { data, year } = useCustomContext();
-
+  // const prevBtn = useRef(null);
+  // const nextBtn = useRef(null);
+  const swiperRef = useRef(null);
   return (
     <div className={style.swiper_container}>
+      <button
+        className={style.prev_btn}
+        onClick={() => swiperRef.current?.slidePrev()}
+      >
+        Prev
+      </button>
       <Swiper
         modules={[Navigation, Pagination]}
-        navigation
+        // navigation={{
+        //   prevEl: prevBtn.current,
+        //   nextEl: nextBtn.current,
+        // }}
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         spaceBetween={80}
         slidesPerView={3}
         breakpoints={{
@@ -39,7 +53,15 @@ const Slide: React.FC = () => {
             <p className={style.slide_content}>{e.content}</p>
           </SwiperSlide>
         ))}
+        {/* <div className={style.prev_btn} ref={prevBtn}>
+          prev
+        </div>
+        <div className={style.next_btn} ref={nextBtn}></div> */}
       </Swiper>
+      <button
+        className={style.next_btn}
+        onClick={() => swiperRef.current?.slideNext()}
+      ></button>
     </div>
   );
 };

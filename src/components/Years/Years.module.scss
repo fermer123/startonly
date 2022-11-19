@@ -1,7 +1,9 @@
 .years_container {
   margin: 0 auto;
   max-height: 160px;
+  padding: 0 215px;
   margin-bottom: 137px;
+
   .years {
     display: flex;
     justify-content: flex-start;
@@ -12,7 +14,6 @@
     text-align: center;
     letter-spacing: -0.02em;
     .years_startDate {
-      margin-left: 215px;
       color: #3877ee;
     }
     .years_endDate {
@@ -22,7 +23,7 @@
   }
   ul {
     position: relative;
-    margin-left: 450px;
+    margin: 0 auto;
     background-color: transparent;
     border: 1px solid rgba($color: #42567a, $alpha: 0.2);
     background: transparent;
