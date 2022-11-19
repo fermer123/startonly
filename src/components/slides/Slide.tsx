@@ -4,13 +4,11 @@ import style from './Slide.module.scss';
 import 'swiper/swiper.scss';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import 'swiper/modules/navigation/navigation.scss';
-import 'swiper/modules/pagination/pagination.scss'; // Pagination module
-import { Navigation, Pagination } from 'swiper';
+import { Navigation } from 'swiper';
 
 const Slide: React.FC = () => {
   const { data, year } = useCustomContext();
-  // const prevBtn = useRef(null);
-  // const nextBtn = useRef(null);
+
   const swiperRef = useRef(null);
   return (
     <div className={style.swiper_container}>
@@ -18,14 +16,10 @@ const Slide: React.FC = () => {
         className={style.prev_btn}
         onClick={() => swiperRef.current?.slidePrev()}
       >
-        Prev
+        &lt;
       </button>
       <Swiper
-        modules={[Navigation, Pagination]}
-        // navigation={{
-        //   prevEl: prevBtn.current,
-        //   nextEl: nextBtn.current,
-        // }}
+        modules={[Navigation]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -53,15 +47,13 @@ const Slide: React.FC = () => {
             <p className={style.slide_content}>{e.content}</p>
           </SwiperSlide>
         ))}
-        {/* <div className={style.prev_btn} ref={prevBtn}>
-          prev
-        </div>
-        <div className={style.next_btn} ref={nextBtn}></div> */}
       </Swiper>
       <button
         className={style.next_btn}
         onClick={() => swiperRef.current?.slideNext()}
-      ></button>
+      >
+        &gt;
+      </button>
     </div>
   );
 };
