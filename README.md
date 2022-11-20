@@ -26,7 +26,6 @@ yarn build
 ```
 # Для разработки или оценки результата [живой странице](http://localhost:3000/) введите
 ```
-```
 npm run start
 # or
 yarn start
