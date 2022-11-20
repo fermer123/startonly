@@ -24,15 +24,10 @@ npm run build
 # or
 yarn build
 ```
-### и затем
+# Для разработки или оценки результата [живой странице](http://localhost:3000/) введите
+```
 ```
 npm run start
 # or
 yarn start
-```
-# Для разработки или оценки результата [живой странице](http://localhost:3000/) введите
-```
-npm run dev
-# or
-yarn dev
 ```
