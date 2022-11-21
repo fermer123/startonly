@@ -13,12 +13,33 @@
     line-height: 160px;
     text-align: center;
     letter-spacing: -0.02em;
+
     .years_startDate {
       color: #3877ee;
     }
     .years_endDate {
       margin-left: 122px;
       color: #ef5da8;
+    }
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      border: 1px solid #42567a;
+      opacity: 0.1;
+    }
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 49%;
+      left: 0;
+      width: 100%;
+      border: 1px solid #42567a;
+      opacity: 0.1;
     }
   }
   ul {
