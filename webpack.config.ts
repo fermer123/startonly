@@ -1,18 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: path.resolve(__dirname, './src/index.tsx'),
+  entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
-    path: path.join(__dirname, '/build'),
+    path: path.join(__dirname, 'build'),
     filename: 'build.js',
   },
   resolve: {
-    alias: {
-      swiper: path.resolve(__dirname, './node_modules/swiper/'),
-    },
     extensions: ['.ts', '.tsx', '.js'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(__dirname, 'Tsconfig.json'),
+      }),
+    ],
   },
   devServer: {
     port: 3000,
@@ -22,7 +24,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './public/index.html'),
+      template: path.resolve(__dirname, 'public/index.html'),
     }),
   ],
   module: {
