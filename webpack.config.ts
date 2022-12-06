@@ -1,8 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import type { Configuration } from 'webpack';
 
-module.exports = {
+const devServer: DevServerConfiguration = {};
+const config: Configuration = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     path: path.join(__dirname, 'build'),
@@ -16,12 +19,16 @@ module.exports = {
       }),
     ],
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
   devServer: {
     port: 3000,
     open: true,
     historyApiFallback: true,
   },
-
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
@@ -56,3 +63,4 @@ module.exports = {
     ],
   },
 };
+export default config;
