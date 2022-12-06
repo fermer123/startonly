@@ -4,7 +4,11 @@ import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 import type { Configuration } from 'webpack';
 
-const devServer: DevServerConfiguration = {};
+const devServer: DevServerConfiguration = {
+  port: 3000,
+  open: true,
+  historyApiFallback: true,
+};
 const config: Configuration = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
@@ -24,11 +28,7 @@ const config: Configuration = {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
-  devServer: {
-    port: 3000,
-    open: true,
-    historyApiFallback: true,
-  },
+  devServer,
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
