@@ -34,6 +34,19 @@
       {
         "endOfLine": "auto"
       }
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports"
+      }
+    ],
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
     ]
   },
   "settings": {

@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
-import {iventItem, useCustomContext} from '../context/Context';
+import type {iventItem} from '../context/Context';
+import {useCustomContext} from '../context/Context';
 import style from './Slide.module.scss';
 import 'swiper/swiper.scss';
 import {Swiper, SwiperSlide} from 'swiper/react/swiper-react.js';
