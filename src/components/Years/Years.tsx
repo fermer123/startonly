@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './Years.module.scss';
-import { useCustomContext } from '../context/Context';
+import {useCustomContext} from '../context/Context';
 
 const Years: React.FC = () => {
-  const { data, year, rotate, rot } = useCustomContext();
+  const {data, year, rotate, rot} = useCustomContext();
 
   return (
     <div className={style.years_container}>
@@ -20,8 +20,7 @@ const Years: React.FC = () => {
         style={{
           transform: `rotate(${rotate}deg)`,
           translate: '0% -345px',
-        }}
-      >
+        }}>
         {data.map((e, idx) => (
           <li
             className={
@@ -36,8 +35,7 @@ const Years: React.FC = () => {
             }}
             onClick={() => {
               rot(idx);
-            }}
-          >
+            }}>
             {rotate === idx * 90 ? (
               <div className={style.years_active}>
                 <p className={style.years_active_number}>{e.id}</p>

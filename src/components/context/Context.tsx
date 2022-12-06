@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useMemo,
-  useState,
-} from 'react';
+import {createContext, useCallback, useContext, useMemo, useState} from 'react';
 import data from '../data/data.json';
 
 export type iventItem = {
@@ -32,7 +26,7 @@ interface iCustomContext {
 
 export const Context = createContext({} as iCustomContext);
 
-export const CustomContext = ({ children }: { children: React.ReactNode }) => {
+export const CustomContext = ({children}: {children: React.ReactNode}) => {
   const [year, setYear] = useState<number>(1);
   const [rotate, setRotate] = useState<number>(0);
 

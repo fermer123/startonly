@@ -1,14 +1,14 @@
-import React, { useRef } from 'react';
-import { iventItem, useCustomContext } from '../context/Context';
+import React, {useRef} from 'react';
+import {iventItem, useCustomContext} from '../context/Context';
 import style from './Slide.module.scss';
 import 'swiper/swiper.scss';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+import {Swiper, SwiperSlide} from 'swiper/react/swiper-react.js';
 import 'swiper/modules/navigation/navigation.scss';
 import 'swiper/modules/pagination/pagination.scss';
-import { Navigation, Pagination } from 'swiper';
+import {Navigation, Pagination} from 'swiper';
 
 const Slide: React.FC = () => {
-  const { data, year } = useCustomContext();
+  const {data, year} = useCustomContext();
   const matchMedia = window.matchMedia('(max-width: 500px)').matches;
   const swiperRef = useRef(null);
   return (
@@ -16,8 +16,7 @@ const Slide: React.FC = () => {
       {!matchMedia ? (
         <button
           className={style.prev_btn}
-          onClick={() => swiperRef.current?.slidePrev()}
-        >
+          onClick={() => swiperRef.current?.slidePrev()}>
           &lt;
         </button>
       ) : null}
@@ -51,8 +50,7 @@ const Slide: React.FC = () => {
             spaceBetween: 80,
           },
         }}
-        className={style.mySwiper}
-      >
+        className={style.mySwiper}>
         {data[year - 1].events.map((e: iventItem) => (
           <SwiperSlide className={style.swiperslide} key={e.year}>
             <p className={style.slide_year}>{e.year}</p>
@@ -64,8 +62,7 @@ const Slide: React.FC = () => {
       {!matchMedia ? (
         <button
           className={style.next_btn}
-          onClick={() => swiperRef.current?.slideNext()}
-        >
+          onClick={() => swiperRef.current?.slideNext()}>
           &gt;
         </button>
       ) : null}
